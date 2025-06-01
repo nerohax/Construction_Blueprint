@@ -61,4 +61,4 @@ for img_name in image_files:
     plt.show()
 
     # Print counts
-    print(f"✅ {img_name} ➜ Doors: {class_counts['door']}, Windows: {class_counts['window']}")
+    print(f" {img_name} ➜ Doors: {class_counts['door']}, Windows: {class_counts['window']}")
