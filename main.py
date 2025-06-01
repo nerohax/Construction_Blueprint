@@ -3,6 +3,24 @@ import cv2
 import os
 import matplotlib.pyplot as plt
 
+
+from ultralytics import YOLO
+
+model = YOLO("yolov8n.pt")
+
+model.train(
+    data="data.yaml",
+    epochs=300,
+    imgsz=640,
+    batch=8,
+    lr0=0.0001,
+    optimizer="Adam",
+    augment=True,
+    name="yolo_banana_seg_model"
+)
+
+
+
 # Load your trained segmentation model
 model = YOLO("best.pt")  # or wherever your model is saved
 
